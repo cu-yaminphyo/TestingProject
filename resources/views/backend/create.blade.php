@@ -89,7 +89,9 @@
             <label for="review"><b>Review :</b></label>
           </div>
           <div class="col-md-7">
-            <input type="text" class="form-control" name="review"/>
+            {{-- <input type="text" class="form-control" name="review"/> --}}
+            <textarea id="my-textarea"  class="form-control" name="review" ></textarea>
+
           </div>
         </div>
         </div>

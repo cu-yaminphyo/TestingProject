@@ -20,6 +20,7 @@ class AdminController extends Controller
 
 
     }
+   
     public function __construct()
     {
         $this->middleware('auth');
@@ -87,14 +88,19 @@ class AdminController extends Controller
                 $movies->imagename = $cover->getClientOriginalName();
                 $movies->link      = $request->get('link');
                 $movies->review    = $request->get('review');
-                 $movies->save();
                
-            }
+                 $movies->save();
+                
+                     
+                   
+                 }
+            
 
             return redirect('/backend')->with('success', 'Contact saved!');
 
         
     }
+   
     /**
      * Display the specified resource.
      *
@@ -181,4 +187,5 @@ class AdminController extends Controller
 
         return redirect('/backend')->with('success', 'Contact deleted!');
     }
+   
 }

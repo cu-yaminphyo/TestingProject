@@ -15,5 +15,8 @@ class movies extends Model
 'mime',
 'link',
 'review',
+'count',
+'star_count',
+'people_count',
     ];
 }

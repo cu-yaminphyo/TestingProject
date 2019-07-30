@@ -1,5 +1,10 @@
 @extends('frontend.main')
+
+
 @section('content')
+<br>
+<br>
+<br>
     <div class="container">
             <div  id="carda">
                     <div class="row">

@@ -1,5 +1,5 @@
 <?php
-
+use Symfony\Component\HttpKernel\Fragment\RoutableFragmentRenderer;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +26,15 @@ Route::get('/funny','AllController@funny');
 Route::get('/search','AllController@search');
 Route::get('/drama','AllController@drama');
 Route::get('playmovie/{id}','AllController@playmovie');
+Route::get('counter',function(){
+    return view('frontend.counter');
+});
 Route::get('/about','AllController@about');
 Route::get('/frontend/showall/{id}','AllController@showall');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::resource('backend', 'AdminController');
 Route::resource('addcategory', 'AddCategory');

@@ -1,5 +1,7 @@
 @extends('frontend.main')
-@section('content')
+
+
+@section('content')<br><br>
 <div class="container-fluid" id="about">
     <div class="row " ><br>
         <div class="col-md-7"><br>

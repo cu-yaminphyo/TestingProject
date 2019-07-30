@@ -10,15 +10,23 @@ class AllController extends Controller
 {
     
    
-    public function playmovie($id){
+    public function playmovie(Request $request,$id){
 
       $id = DB::table('movies')->find($id);
       $category = DB::table('categories') ->select('*')->get();
+   $check =$request->get('click_button');
+
+   if(isset($check)){
+       
+   }
+
+    
 
       return view('frontend.playmovie',compact('id','category'));
 
     }
 
+   
 public function showall($id){
 
     $categorynames = DB::table('categories')->find($id);
@@ -28,7 +36,7 @@ public function showall($id){
     $moviename = DB::table('movies')
     ->join('categories','movies.cid','=','categories.id')
     ->select('movies.*','categories.categoryname')
-    ->where('movies.cid','=',$movieid)->paginate(5);
+    ->where('movies.cid','=',$movieid)->paginate(6);
 
       return view('frontend.showall',compact('category','categorynames','moviename'));
    

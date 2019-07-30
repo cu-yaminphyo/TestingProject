@@ -49,7 +49,7 @@
                 <label for="moviename">ဇာတ်လမ်းအမည် :</label>
             </div>
             <div class="col-md-7">
-                <input type="text" class="form-control" name="moviename" value={{ $contact->moviename }} />
+                <input type="text" class="form-control" name="moviename" value="{{ $contact->moviename }}" />
             </div>
         </div>
             </div>
@@ -96,7 +96,11 @@
                 <label for="review">Review:</label>
             </div>
             <div class="col-md-7">
-                <input type="text" class="form-control" name="review" value={{ $contact->review }} />
+                {{-- <input type="text" class="form-control" name="review" value="{{ $contact->review }}" /> --}}
+
+               
+                <textarea id="my-textarea"  class="form-control" name="review" value="{{$contact->review}}">{{$contact->review}}</textarea>
+           
             </div>
                     </div>
                 

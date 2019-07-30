@@ -7,7 +7,11 @@
     <link rel="stylesheet"  href="{{asset('css/custom.css')}}" type="text/css">
     <title>MM Movies</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
-
+<style>
+    #bar{
+        background-color:aquamarine;
+    }
+    </style>
 </head>
 <body>
    <div class="container-fruid" id="bar">
